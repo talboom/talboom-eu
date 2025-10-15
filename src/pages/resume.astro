@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ResumeComponent from '../components/Resume.tsx';
+import ResumeComponent from '../components/Resume.astro';
 ---
 
 <Layout title="About Me - Thijs Talboom">
@@ -60,5 +60,5 @@ import ResumeComponent from '../components/Resume.tsx';
   </section>
 
   <!-- Resume Section -->
-  <ResumeComponent client:load />
+  <ResumeComponent />
 </Layout>
