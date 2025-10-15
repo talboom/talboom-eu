@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Projects - Thijs Talboom">
+  <section class="px-6 sm:px-12 lg:px-24 py-12 sm:py-16 lg:py-24">
+    <div class="max-w-4xl mx-auto">
+      <!-- Navigation back -->
+      <div class="mb-8">
+        <a href="/" class="text-blue-600 hover:text-blue-800 transition-colors font-medium">
+          ← Back to home
+        </a>
+      </div>
+
+      <!-- Page Header -->
+      <div class="mb-12">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">All Projects</h1>
+        <p class="text-lg text-gray-600">
+          A collection of web applications and tools I've built over the years.
+        </p>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="group">
+          <h3 class="text-xl font-medium text-gray-900 mb-3">
+            <a
+              href="https://ookopsignal.eu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-blue-600 transition-colors"
+            >
+              Ook op Signal →
+            </a>
+          </h3>
+          <p class="text-gray-600 mb-4">
+            A web tool that helps Dutch users create profile pictures with 'Ook op Signal' badges,
+            making the transition from WhatsApp to Signal easier and more social.
+          </p>
+          <div class="text-sm text-gray-500">
+            Built with Next.js, TypeScript, and HTML5 Canvas
+          </div>
+        </div>
+
+        <div class="group">
+          <h3 class="text-xl font-medium text-gray-900 mb-3">
+            <a
+              href="https://flightwatch.talboom.eu"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-blue-600 transition-colors"
+            >
+              FlightWatch →
+            </a>
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Golf tournament management system that allows multiple flights to track
+            and view live scores, creating a more engaging tournament experience.
+          </p>
+          <div class="text-sm text-gray-500">
+            Built with React, Node.js, and real-time updates
+          </div>
+        </div>
+
+        <div class="group">
+          <h3 class="text-xl font-medium text-gray-900 mb-3">
+            <a
+              href="https://sidor.talboom.eu"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-blue-600 transition-colors"
+            >
+              Sidor →
+            </a>
+          </h3>
+          <p class="text-gray-600 mb-4">
+            A minimalist todo application built with the MERN stack,
+            focusing on clean design and intuitive user experience.
+          </p>
+          <div class="text-sm text-gray-500">
+            Built with MongoDB, Express, React, and Node.js
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

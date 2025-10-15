@@ -1,0 +1,82 @@
+import React from 'react';
+import ResumeCard from './ResumeCard';
+
+// Blue T icon as an SVG component
+const BlueTIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="24" height="24" rx="4" fill="#3B82F6"/>
+    <path d="M17 8H7V10H11V16H13V10H17V8Z" fill="white"/>
+  </svg>
+);
+
+const Resume: React.FC = () => {
+  return (
+    <div id="resume" className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Resume</h2>
+        <div className="space-y-8">
+          <ResumeCard
+            title="Domain Product Lead - Supply Chain Systems"
+            subtitle="2024 - 2025 | Picnic Technologies"
+            image={{ src: "/images/picnic-logo.png", alt: "Picnic" }}
+            list={[
+              "Managing the Supply Chain Systems domain, spanning 14 teams and 150 engineers",
+              "Leading the transformation from manual to automated warehousing using in-house developed software, which is a key factor in enabling profitability",
+              "Overseeing the expansion of the domain by 2x, while initiating and leading reorganizations to support the company's growth",
+              "Developing and executing strategic roadmaps, continuously aligning with stakeholders at all levels across business, operations and engineering",
+            ]}
+          />
+          <ResumeCard
+            title="Product Owner - Warehouse Management Systems"
+            subtitle="2019 - 2021 | Picnic Technologies"
+            image={{ src: "/images/picnic-logo.png", alt: "Picnic" }}
+            list={[
+              "Built in-house WMS to replace third-party software, growing the team from 4 to 25 software engineers",
+              "Managed complex engineering challenges, transforming the product from monolith to a future-proof microservices-based architecture",
+              "Created and executed periodic strategic roadmaps in alignment with stakeholders to reduce fulfillment costs and enhance quality of service",
+            ]}
+          />
+          <ResumeCard
+            title="Lead Fulfillment Analyst"
+            subtitle="2018 - 2019 | Picnic Technologies"
+            image={{ src: "/images/picnic-logo.png", alt: "Picnic" }}
+            list={[
+              "Participated in the fulfillment leadership team as Lead Analyst, contributing to strategic planning and execution",
+              "Oversaw a team of 8 analysts and served as program manager for all improvement projects in warehousing while ensuring strategic alignment",
+            ]}
+          />
+          <ResumeCard
+            title="Growth Analyst"
+            subtitle="2016 - 2018 | Picnic Technologies"
+            image={{ src: "/images/picnic-logo.png", alt: "Picnic" }}
+            list={[
+              "Planned and executed growth strategy from 3 to 50+ cities in the Netherlands, and the initial expansion to Germany",
+              "Led demand forecasting team responsible for both operational (short-term) and strategic (long-term) planning",
+              "Initiated organic acquisition projects to increase the customer base",
+            ]}
+          />
+          <ResumeCard
+            title="Last Mile Engineer"
+            subtitle="2014 - 2015 | Picnic Technologies"
+            image={{ src: "/images/picnic-logo.png", alt: "Picnic" }}
+            list={[
+              "Joined Picnic as one of the first 10 employees during start-up phase",
+              "Set up the Last Mile distribution concept from scratch and launched supportive services, such as customer service and route planning algorithms",
+              "Personally completed the first customer delivery (and many more)",
+            ]}
+          />
+          <ResumeCard
+            title="Freelance Web Developer"
+            subtitle="2013 - 2015 | Talboom ICT"
+            image={{ src: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNCIgZmlsbD0iIzNCODJGNiIvPgo8cGF0aCBkPSJNMTcgOEg3VjEwSDExVjE2SDEzVjEwSDE3VjhaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K", alt: "Talboom ICT" }}
+            list={[
+              "Setup company building websites during my studies",
+            ]}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Resume;

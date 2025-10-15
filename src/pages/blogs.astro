@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BlogList from '../components/BlogList.astro';
+---
+
+<Layout title="Blogs - Thijs Talboom">
+  <section class="px-6 sm:px-12 lg:px-24 py-12 sm:py-16 lg:py-24">
+    <div class="max-w-4xl mx-auto">
+      <!-- Navigation back -->
+      <div class="mb-8">
+        <a href="/" class="text-blue-600 hover:text-blue-800 transition-colors font-medium">
+          ← Back to home
+        </a>
+      </div>
+
+      <!-- Page Header -->
+      <div class="mb-12">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">All Posts</h1>
+        <p class="text-lg text-gray-600">
+          Thoughts on engineering leadership, technology, and building scalable systems.
+        </p>
+      </div>
+
+      <!-- Blog Posts List -->
+      <BlogList variant="full" />
+    </div>
+  </section>
+</Layout>

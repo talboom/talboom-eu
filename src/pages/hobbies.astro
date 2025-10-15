@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Hobbies - Thijs Talboom">
+  <section class="px-6 sm:px-12 lg:px-24 py-12 sm:py-16 lg:py-24">
+    <div class="max-w-4xl mx-auto">
+      <!-- Navigation back -->
+      <div class="mb-8">
+        <a href="/" class="text-blue-600 hover:text-blue-800 transition-colors font-medium">
+          ← Back to home
+        </a>
+      </div>
+
+      <!-- Page Header -->
+      <div class="mb-12">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Hobbies & Interests</h1>
+        <p class="text-lg text-gray-600">
+          What I enjoy doing outside of work and technology.
+        </p>
+      </div>
+
+      <!-- Hobbies Content -->
+      <div class="space-y-8">
+        <div class="group">
+          <h3 class="text-xl font-medium text-gray-900 mb-3">
+            <a
+              href="https://www.strava.com/athletes/17288184"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-blue-600 transition-colors"
+            >
+              Running →
+            </a>
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Passionate runner who enjoys both road running and trail running.
+            I find running to be the perfect way to clear my mind and stay healthy.
+            You can follow my runs on Strava.
+          </p>
+        </div>
+
+        <div class="group">
+          <h3 class="text-xl font-medium text-gray-900 mb-3">
+            <a
+              href="/projects"
+              class="hover:text-blue-600 transition-colors"
+            >
+              Side Projects →
+            </a>
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Building small web applications and tools in my spare time.
+            I enjoy experimenting with new technologies and solving interesting
+            problems through code.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

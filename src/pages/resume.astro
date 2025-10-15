@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ResumeComponent from '../components/Resume.tsx';
+---
+
+<Layout title="About Me - Thijs Talboom">
+  <section class="px-6 sm:px-12 lg:px-24 py-12 sm:py-16 lg:py-24">
+    <div class="max-w-4xl mx-auto">
+      <!-- Navigation back -->
+      <div class="mb-8">
+        <a href="/" class="text-blue-600 hover:text-blue-800 transition-colors font-medium">
+          ← Back to home
+        </a>
+      </div>
+
+      <!-- Profile Section -->
+      <div class="mb-12">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">About Me</h1>
+      </div>
+
+      <!-- About Me Content -->
+      <div class="mb-16 max-w-3xl">
+        <div class="space-y-6 text-gray-700 leading-relaxed">
+          <p class="text-lg">
+            Ten years ago, I joined Picnic Technologies, which has since
+            revolutionized the online grocery landscape in the Netherlands,
+            Germany and France. I was part of the company's growth from ten to
+            20.000 employees and have been in various leadership roles. In my
+            most recent role, I led a domain of 150 software engineers across
+            14 teams, demonstrating my ability to manage large,
+            cross-functional teams and deliver on complex projects. My
+            analytical mindset and strong conceptual thinking have
+            continuously enabled me to be successful in key leadership
+            roles. I recently relocated to Stockholm and am excited for my
+            next step.
+          </p>
+
+          <p>
+            Throughout my career, I've been passionate about building scalable
+            software systems and leading engineering teams. From personally
+            delivering the first customer order at Picnic to scaling warehouse
+            management systems that process millions of orders, I've experienced
+            the full spectrum of technology leadership.
+          </p>
+        </div>
+
+        <!-- LinkedIn Link -->
+        <div class="mt-6">
+          <a
+            href="https://www.linkedin.com/in/t-talboom/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-600 hover:text-blue-800 transition-colors font-medium"
+          >
+            Connect on LinkedIn →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <ResumeComponent client:load />
+</Layout>
