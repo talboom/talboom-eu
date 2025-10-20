@@ -19,7 +19,7 @@ The reasons to move away from WhatsApp and toward Signal are well-documented: be
 
 This is the classic network effect problem. Moving to better social technology isn't just an individual choice, it requires your network.
 
-![How to show your are also on Signal](/images/ook_op_signal_preview.png)
+![How to show your are also on Signal](/images/ook-op-signal-preview.png)
 
 ## What are the challenges we face?
 
