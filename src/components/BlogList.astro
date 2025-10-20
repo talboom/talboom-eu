@@ -25,7 +25,8 @@ const blogs = allBlogPosts
       month: 'long',
       day: 'numeric'
     }),
-    published: post.data.published
+    published: post.data.published,
+    image: post.data.image,
   }))
   .sort((a, b) => {
     // Sort by date, with featured posts first
@@ -60,34 +61,56 @@ const isFeatured = variant === 'featured';
   <!-- Featured Blog page list layout -->
   <div class="space-y-8">
     {featuredBlogs.map(blog => (
-      <article class="group">
-        <h2 class="text-xl font-medium text-gray-900 mb-2">
-          <a href={blog.href} class="hover:text-blue-600 transition-colors">
-            {blog.title} →
-          </a>
-        </h2>
-        <p class="text-gray-600 mb-2">
-          {blog.description}
-        </p>
-        <time class="text-sm text-gray-500">{blog.date}</time>
-      </article>
+      <a href={blog.href} class="hover:text-blue-600 transition-colors">
+        <article class="group flex gap-6 items-center">
+            {blog.image && (
+              <div class="hidden sm:block flex-[1]">
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  class="w-full rounded-lg shadow-md object-cover aspect-square"
+                />
+              </div>
+            )}
+            <div class="flex-[3]">
+              <h2 class="text-xl font-medium text-gray-900 mb-2">
+                  {blog.title} →
+              </h2>
+              <p class="text-gray-600 mb-2">
+                {blog.description}
+              </p>
+              <time class="text-sm text-gray-500">{blog.date}</time>
+          </div>
+        </article>
+      </a>
     ))}
   </div>
 ) : (
   <!-- Full Blog page list layout -->
   <div class="space-y-8">
     {displayBlogs.map(blog => (
-      <article class="group">
-        <h2 class="text-xl font-medium text-gray-900 mb-2">
-          <a href={blog.href} class="hover:text-blue-600 transition-colors">
-            {blog.title} →
-          </a>
-        </h2>
-        <p class="text-gray-600 mb-2">
-          {blog.description}
-        </p>
-        <time class="text-sm text-gray-500">{blog.date}</time>
-      </article>
+       <a href={blog.href} class="hover:text-blue-600 transition-colors">
+        <article class="group flex gap-6 items-center">
+            {blog.image && (
+              <div class="hidden sm:block flex-[1]">
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  class="w-full rounded-lg shadow-md object-cover aspect-square"
+                />
+              </div>
+            )}
+            <div class="flex-[3]">
+              <h2 class="text-xl font-medium text-gray-900 mb-2">
+                  {blog.title} →
+              </h2>
+              <p class="text-gray-600 mb-2">
+                {blog.description}
+              </p>
+              <time class="text-sm text-gray-500">{blog.date}</time>
+          </div>
+        </article>
+      </a>
     ))}
   </div>
 )}

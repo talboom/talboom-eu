@@ -7,6 +7,7 @@ date: 2025-10-25
 readTime: 3
 published: true
 featured: true
+image: /images/ook-op-signal.png
 ---
 
 _To see the tool go to [Signalbadge.eu](https://signalbadge.eu)._
