@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 
 export interface Props {
-  variant?: 'home' | 'full' | 'featured';
+  variant?: 'full' | 'featured';
   limit?: number;
 }
 
@@ -33,31 +33,14 @@ const blogs = allBlogPosts
     if (a.featured && !b.featured) return -1;
     if (!a.featured && b.featured) return 1;
     return new Date(b.date).getTime() - new Date(a.date).getTime();
-  }); 
+  });
 
 const displayBlogs = limit ? blogs.slice(0, limit) : blogs;
-const featuredBlogs = limit ? blogs.filter(blog => blog.featured).slice(0,limit) : blogs.filter(blog => blog.featured);
-const isHome = variant === 'home';
+const featuredBlogs = limit ? blogs.filter(blog => blog.featured).slice(0, limit) : blogs.filter(blog => blog.featured);
 const isFeatured = variant === 'featured';
 ---
 
-{isHome ? (
-  <!-- Home page grid layout -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {displayBlogs.map(blog => (
-      <div class="group">
-        <h3 class="text-lg font-medium text-gray-900 mb-2">
-          <a href={blog.href} class="hover:text-blue-600 transition-colors">
-            {blog.title} →
-          </a>
-        </h3>
-        <p class="text-gray-600 text-sm">
-          {blog.description}
-        </p>
-      </div>
-    ))}
-  </div>
-) : isFeatured ? (
+{isFeatured ? (
   <!-- Featured Blog page list layout -->
   <div class="space-y-8">
     {featuredBlogs.map(blog => (
